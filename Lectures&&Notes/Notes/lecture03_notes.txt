@@ -1,0 +1,20 @@
+Chapters 3-5 Advanced SQL.
+
+Aggregates:
+-AVG, MIN, MAX, SUM, COUNT.
+
+String operations:
+-case sensitive
+-UPPER(s), LOWER(s)
+-LIKE: use with '%' and '_'
+-Substrings: SUBSTRING(s,0,n)
+-Concatenate: s || s
+
+Nested Queries are often difficult to optimize.
+-ALL, ANY, IN, NOT, EXISTS
+- IN is eq. to '= ANY()'
+ 
+
+-Window functions perform calculation across a set of of tuples
+
+- Common table expressions provide an alternative to window functions or nested queries. 

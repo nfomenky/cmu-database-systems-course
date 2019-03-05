@@ -1,0 +1,77 @@
+Chapter 6 Relational Algebra.
+
+Before Relational Model:
+- DB apps were difficult to build and maintain.
+-Tight coupling between logical (what data you have) and physical (how data is stored on the DB) layers.
+
+After Relational Model (Ted Codd, 1970):
+- Store DB in simple data structures.
+- Access data through high level language.
+-Physical language is left to the DB/DBA while DB users need not worry about these complex specifics.
+
+Data Models:
+A data model is a collection of concepts for describing the data, data relationships, semantics, and constraints in a DB (Ex. a relational model).
+
+A schema is a description of a particular collection of data, using a given data model. The overall design of the DB (E.g. entities, relations, attributes, etc..).
+
+
+Relational Model is comprised of 3 components:
+-Structure: The definition of relations and their contents (attributes and domains they have).
+-Integrity:Ensure the DB's contents satisfy constraints.
+-Manipulation: how to access and modify a DB's contents. 
+
+n-ary relation = table with n columns
+
+When 2 tables have a many to many relationship, create a third "cross-reference" table with the PKs of the other 2 tables as its columns. Both these PKs form this 3rd table's PK. Then have each of the first 2 tables map to this table instead.
+
+
+Data Manipulation Languages(DML):
+How to store and retrieve info from a DB.
+-Procedural: query specifies both what and how the DBMS should find the desired result (Relational algebra).
+- Non-procedural: query only specifies what data is desired, not how to find it (relational calculus).
+
+Relational Algebra (basically just set theory from discrete math):
+-Select: choose a subset of the tuples from a relation that satisfies a selection predicate. Predicate acts as a filter. Can combine >1 predicate using conjunctions and disjunctions.(e.g. SELECT *...)
+
+
+-Projection: generate a relation with tuples that contains only the specified attributes. Can rearrange attributes' ordering and can manipulate the values. (eg. SELECT b_id-10, a_id...)
+
+-Union: all tuples that appears either 1 or both input relations. Must have same number of columns. (e.g SELECT * FROM R UNION SELECT * FROM S)
+
+-Intersection: all tuples that appear in both input relations. Must have same number of columns. 
+
+-Difference: only tuples that appear in 1st but not in 2nd relation. Must have same number of columns.
+
+-Product: a relation that contains all possible combinations of tuples from the input relations. 
+
+-Join: a relation that contains all tuples that are a combo of 2 tuples (one from each input relation) with a common value for one or more attributes. looks for matches in attributes of the same name.
+
+
+Non-relational Data models
+
+-Key/Value: store records in an associative array that maps a key to a value. Sometimes called a dictionary or hash table.
+
+-Graph: represent the DB as a collection of nodes and edges, each of which can also be annotated with additional properties.
+
+-Document: a self-contained record that contains the description of its data attributes and their corresponding values (e.g. JSON, XML object documents). Ex include mongoDB.
+
+-Column-family: a hybrid data model that maps a key to a column family. Each column family contains any number of rows that each has one or more column names and values. Ex include Google Big Table, Cassandra, HBase.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

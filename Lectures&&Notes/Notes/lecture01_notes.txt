@@ -1,0 +1,50 @@
+Chapter 1 and 2. Intro to DBs
+
+A DB is an organized collection of inter-related data that models some aspect of the real world
+
+A DBMS is a software that allows apps to store and analyze info in a particular DB.
+
+A general-purpose DBMS is designed to allow the definition, creation, querying, update, and administration of DBs (MySQL, PostgreSQL).
+
+DBMS Types:
+- On-line Transaction Transaction Processing (OLTP): Fast operations that only read/update a small amount of data each time. Used to interact with outside world like websites to facilitate fast operations. Examples include MySQL, SQLite, PostgreSQL, MS SQLServer.
+
+- On-line Analytical Processing (OLAP): Designed for complex queries that read a lot of data at once to compute aggregates. Used for data analysis to extrapolate new knowledge from data. Typically read-only. Ex. include Hive, Teradata, Amazon RedShift.
+
+- Hybrid Transaction + Analytical Processing (HTAP): OLTP + OLAP together on the same DB instance. Ex. includes Snappy, IBM DB2.
+
+Relational Model:
+
+A relation is an unordered set that contains the relationship of attributes that represent entities. 
+
+A tuple is a sequence of attribute values in the relation.
+
+Integrity constraints: 
+-Primary key: a PK uniquely identifies a single tuple
+
+-Foreign key: a FK specifies that an attribute from one relation has to map to a tuple in another relation.
+
+Many DBs enforce constraints and throw errors, but not all.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
